@@ -34,19 +34,20 @@ const StyledLink = styled(Link)`
       display: block;
     }
   }
-  .right-eye {
-    animation-delay: 20ms;
-  }
-  &:hover {
-    .left-eye,
-    .right-eye {
-      transform-origin: center 60%;
-      animation-name: ${blink};
-      animation-duration: 350ms;
-      animation-iteration-count: 1;
-    }
-  }
 `;
+
+// .right-eye {
+//   animation-delay: 20ms;
+// }
+// &:hover {
+//   .left-eye,
+//   .right-eye {
+//     transform-origin: center 60%;
+//     animation-name: ${blink};
+//     animation-duration: 350ms;
+//     animation-iteration-count: 1;
+//   }
+// }
 
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
@@ -67,11 +68,11 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
         )}
       </MenuButton>
       {isAbsoluteUrl ? (
-        <StyledLink as="a" href={href} aria-label="Pancake home page">
+        <StyledLink as="a" href={href} aria-label="WaterDeFi home page">
           {innerLogo}
         </StyledLink>
       ) : (
-        <StyledLink to={href} aria-label="Pancake home page">
+        <StyledLink to={href} aria-label="WaterDeFi home page">
           {innerLogo}
         </StyledLink>
       )}
